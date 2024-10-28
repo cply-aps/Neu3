@@ -14,15 +14,15 @@ class LoginViewModel: ObservableObject {
     @Published var password: String = ""
     @Published var errorMessage: String = ""
     @Published var isLoggedIn: Bool = false
-    private var cancellables = Set<AnyCancellable>()
     
+    private var cancellables = Set<AnyCancellable>()
     private let webService = WebService()
     
     func login() {
         webService.loginUser(username: username, password: password) { [weak self] result in
             DispatchQueue.main.async {
                 switch result {
-                case .success(let response):
+                case .success(_):
                     // Log in the user regardless of email confirmation
                     self?.isLoggedIn = true
                     
@@ -40,7 +40,7 @@ class LoginViewModel: ObservableObject {
         case .requestFailed:
             errorMessage = "Request failed. Please check your internet connection."
         case .decodingError:
-            errorMessage = "Decoding error. Please try again."
+            errorMessage = "Wrong username or password. Please try again."
         }
     }
 }

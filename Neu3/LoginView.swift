@@ -11,64 +11,55 @@ import SwiftUI
 struct LoginView: View {
     @StateObject private var viewModel = LoginViewModel()
     @FocusState private var focusedField: Field?
-
+    
     enum Field {
         case username
         case password
     }
-
+    
     var body: some View {
-        NavigationView {
-            VStack(spacing: 20) {
-                TextField("Username", text: $viewModel.username)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                    .focused($focusedField, equals: .username) // Manage focus state
-                    .submitLabel(.next) // Changes return button to "Next" for username field
-                    .onSubmit {
-                        // Move focus to the password field
-                        focusedField = .password
-                    }
-
-                SecureField("Password", text: $viewModel.password)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                    .focused($focusedField, equals: .password) // Manage focus state
-                    .submitLabel(.go) // Changes return button to "Go" for password field
-                    .onSubmit {
-                        // Trigger login when return is pressed
-                        viewModel.login()
-                    }
-
-                
-                if !viewModel.errorMessage.isEmpty {
-                    Text(viewModel.errorMessage)
-                        .foregroundColor(.red)
-                        .padding()
+        VStack(spacing: 20) {
+            // Username TextField
+            TextField("Username", text: $viewModel.username)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+                .focused($focusedField, equals: .username)
+                .submitLabel(.next)
+                .onSubmit {
+                    focusedField = .password
                 }
-
-                // NavigationLink that triggers when isLoggedIn becomes true
-                NavigationLink(
-                    destination: HomeView(),
-                    isActive: $viewModel.isLoggedIn
-                ) {
-                    EmptyView()
+            
+            // Password SecureField
+            SecureField("Password", text: $viewModel.password)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+                .focused($focusedField, equals: .password)
+                .submitLabel(.go)
+                .onSubmit {
+                    viewModel.login()
                 }
+            
+            // Error message display
+            if !viewModel.errorMessage.isEmpty {
+                Text(viewModel.errorMessage)
+                    .foregroundColor(.red)
+                    .padding()
             }
-            .padding()
-            .navigationTitle("Login")
-            .onAppear {
-                // Automatically focus on the username field when the view appears
-                focusedField = .username
-            }
+        }
+        .padding()
+        .navigationTitle("Login")
+        .onAppear {
+            focusedField = .username
+        }
+        // Watch for isLoggedIn to change the root view
+        .fullScreenCover(isPresented: $viewModel.isLoggedIn) {
+            HomeView(username: viewModel.username)
         }
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView() // Display the LoginView in the preview
     }
 }
-
-
