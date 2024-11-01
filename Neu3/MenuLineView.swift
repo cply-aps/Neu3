@@ -8,23 +8,38 @@
 
 import SwiftUI
 
-struct LineView: View {
+struct MenuLineView: View {
     let text: String
     
     var body: some View {
-        Text(text)
-            .font(.headline)
-            .padding()
-            .frame(maxWidth: .infinity)
+        
+
+        VStack(spacing: 0) {
+            HStack(spacing: 0) {
+                Text(text)
+                    .foregroundColor(.black)
+                    .font(.title2)
+                    .padding(.vertical, 15)
+                    .padding(.leading, 20)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                
+                Image(systemName: "chevron.forward")
+                    .padding(.trailing, 20)
+                    .foregroundColor(Color(.systemGray2))
+            }
             .background(Color.white.opacity(0.8))
-            .cornerRadius(10)
-            .shadow(radius: 5)
+            
+            Divider()
+                .frame(height: 1.0)
+                .background(Color.black.opacity(0.5))
+                .padding(.leading, 20)
+        }
     }
 }
 
 
-struct LineView_Previews: PreviewProvider {
+struct MenuLineView_Previews: PreviewProvider {
     static var previews: some View {
-        LineView(text: "Some text")
+        MenuLineView(text: "Some text")
     }
 }

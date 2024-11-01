@@ -40,7 +40,7 @@ struct StandardUserHomeView: View, Hashable {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    NavigationLink(destination: CreateEntryView()) {
+                    NavigationLink(destination: StandardUserProfileView()) {
                         HStack {
                             Image(systemName: "person.fill")
                                 .imageScale(.large)

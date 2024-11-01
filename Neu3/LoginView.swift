@@ -23,7 +23,7 @@ struct LoginView: View {
                     Color.blue.opacity(0.2) // Adjust the color and opacity as needed
                             .edgesIgnoringSafeArea(.all) // Make sure the color fills the entire screen
                     
-                    ScrollView {
+                   // ScrollView {
                         VStack(spacing: 20) {
                             Image("CP_Trold_Vaegt")
                                 .resizable()
@@ -69,13 +69,13 @@ struct LoginView: View {
                             // Dismiss the keyboard when tapping outside the fields
                             focusedField = nil
                         }
-                    }
+                  //  }
                 .onAppear {
                     focusedField = .username
                 }
                 // Watch for isLoggedIn to change the root view
                 .fullScreenCover(isPresented: $viewModel.isLoggedIn) {
-                    HomeView(username: viewModel.username)
+                    StandardUserHomeView()
                 }
             }
         }
