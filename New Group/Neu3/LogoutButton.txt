@@ -1,0 +1,15 @@
+                    Button(action: {
+                        // Log out by resetting the root view to LoginView
+                        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+                           let window = windowScene.windows.first {
+                            window.rootViewController = UIHostingController(rootView: LoginView())
+                            window.makeKeyAndVisible()
+                        }
+                    }) {
+                        Text("Logout")
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.red)
+                            .cornerRadius(8)
+                    }
+                    .padding()
