@@ -36,11 +36,11 @@ class LoginViewModel: ObservableObject {
     private func handleError(_ error: NetworkError) {
         switch error {
         case .badUrl:
-            errorMessage = "Invalid URL."
+            errorMessage = AppError.invalidURL.errorDescription ?? "Invalid URL."
         case .requestFailed:
-            errorMessage = "Request failed. Please check your internet connection."
+            errorMessage = AppError.serverError.errorDescription ?? "Request failed. Please check your internet connection."
         case .decodingError:
-            errorMessage = "Wrong username or password. Please try again."
+            errorMessage = AppError.invalidCredentials.errorDescription ?? "Wrong username or password. Please try again."
         }
     }
 }

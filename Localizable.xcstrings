@@ -1,6 +1,17 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "An unknown error occurred." : {
+      "comment" : "Unknown error label",
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ukendt fejl"
+          }
+        }
+      }
+    },
     "Create Entry" : {
       "comment" : "Create Entry label",
       "localizations" : {
@@ -49,6 +60,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Glemt kodeord?"
+          }
+        }
+      }
+    },
+    "Invalid URL." : {
+      "comment" : "Invalid URL. label",
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ugyldig URL"
+          }
+        }
+      }
+    },
+    "Invalid username or password." : {
+      "comment" : "Invalid username or password label",
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forkert brugernavn eller kodeord."
           }
         }
       }
@@ -114,7 +147,15 @@
       }
     },
     "See All Entries" : {
-      "comment" : "See diary entries label"
+      "comment" : "See diary entries label",
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se alle indlæg"
+          }
+        }
+      }
     },
     "See All Entries Page" : {
       "localizations" : {
@@ -122,6 +163,17 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Se alle indlæg"
+          }
+        }
+      }
+    },
+    "Server is unreachable. Please try again later." : {
+      "comment" : "Server is unreachable label",
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kan ikke oprette forbindelse til server, prøv igen senere."
           }
         }
       }

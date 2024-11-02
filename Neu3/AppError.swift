@@ -9,18 +9,21 @@
 import Foundation
 
 enum AppError: LocalizedError {
+    case invalidURL
     case invalidCredentials
     case serverError
     case unknownError
     
     var errorDescription: String? {
         switch self {
+        case .invalidURL:
+            return NSLocalizedString("Invalid URL.", comment: "Invalid URL. label")
         case .invalidCredentials:
-            return "Invalid username or password."
+            return NSLocalizedString("Invalid username or password.", comment: "Invalid username or password label")
         case .serverError:
-            return "Server is unreachable. Please try again later."
+            return NSLocalizedString("Server is unreachable. Please try again later.", comment: "Server is unreachable label")
         case .unknownError:
-            return "An unknown error occurred."
+            return NSLocalizedString("An unknown error occurred.", comment: "Unknown error label")
         }
     }
 }
