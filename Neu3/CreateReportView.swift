@@ -10,7 +10,7 @@ import SwiftUI
 
 struct CreateReportView: View {
     var body: some View {
-        Text("Create Repport Page")
+        Text("Create Report Page")
             .font(.largeTitle)
     }
 }

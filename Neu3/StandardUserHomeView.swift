@@ -23,20 +23,20 @@ struct StandardUserHomeView: View, Hashable {
                         .padding(.bottom, 40.0)
                     
                     NavigationLink(destination: CreateEntryView()) {
-                        MenuLineView(text: "Opret indlæg")
+                        MenuLineView(text: NSLocalizedString("Create Entry", comment: "Create Entry label"))
                     }
                     
                     NavigationLink(destination: SeeAllEntriesView()) {
-                        MenuLineView(text: "Se dagbogs indlæg")
+                        MenuLineView(text: NSLocalizedString("See All Entries", comment: "See diary entries label"))
                     }
-                    
+
                     NavigationLink(destination: CreateReportView()) {
-                        MenuLineView(text: "Opret rapport")
+                        MenuLineView(text: NSLocalizedString("Create Repport", comment: "Create report label"))
                     }
                     Spacer()
                 }
             }
-            .navigationTitle("Dagbog")
+            .navigationTitle("Journal")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -44,13 +44,13 @@ struct StandardUserHomeView: View, Hashable {
                         HStack {
                             Image(systemName: "person.fill")
                                 .imageScale(.large)
-                            Text("Profil")
+                            Text("Profile")
                                 .textScale(.default)
                         }
                     }
                 }
             }
-            .toolbarBackground(Color.white, for: .navigationBar)
+            .toolbarBackground(Color.primary.opacity(0), for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
         }
     }

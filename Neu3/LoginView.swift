@@ -50,7 +50,7 @@ struct LoginView: View {
                                 }
                             
                             // Forgotten password button
-                            Button("Forgotten login credentials?") {
+                            Button("Forgotten password?") {
                                 //TODO: Create "forgottenPassword" POST Method
                             }
                             Spacer()

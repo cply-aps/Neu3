@@ -6,8 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F6C1792D2CD6C2ED00BE8E36 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F6C1792C2CD6C2ED00BE8E36 /* Localizable.xcstrings */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		F68ACD1F2CC9A7E40013844B /* Neu3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neu3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6C1792C2CD6C2ED00BE8E36 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -32,6 +37,7 @@
 		F68ACD162CC9A7E40013844B = {
 			isa = PBXGroup;
 			children = (
+				F6C1792C2CD6C2ED00BE8E36 /* Localizable.xcstrings */,
 				F60327EB2CD55FED00328D3B /* Neu3 */,
 				F68ACD202CC9A7E40013844B /* Products */,
 			);
@@ -91,6 +97,7 @@
 			knownRegions = (
 				en,
 				Base,
+				da,
 			);
 			mainGroup = F68ACD162CC9A7E40013844B;
 			minimizedProjectReferenceProxies = 1;
@@ -109,6 +116,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6C1792D2CD6C2ED00BE8E36 /* Localizable.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +192,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -240,6 +249,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

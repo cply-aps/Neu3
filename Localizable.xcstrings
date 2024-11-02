@@ -1,0 +1,141 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Create Entry" : {
+      "comment" : "Create Entry label",
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opret indlæg"
+          }
+        }
+      }
+    },
+    "Create Entry Page" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opret indlægs side"
+          }
+        }
+      }
+    },
+    "Create Report Page" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opret rapport side"
+          }
+        }
+      }
+    },
+    "Create Repport" : {
+      "comment" : "Create report label",
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opret rapport"
+          }
+        }
+      }
+    },
+    "Forgotten password?" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Glemt kodeord?"
+          }
+        }
+      }
+    },
+    "Journal" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dagbog"
+          }
+        }
+      }
+    },
+    "Login" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Log ind"
+          }
+        }
+      }
+    },
+    "Logout" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Log ud"
+          }
+        }
+      }
+    },
+    "Password" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kodeord"
+          }
+        }
+      }
+    },
+    "Profile" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profil"
+          }
+        }
+      }
+    },
+    "Profile Page" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Profil side"
+          }
+        }
+      }
+    },
+    "See All Entries" : {
+      "comment" : "See diary entries label"
+    },
+    "See All Entries Page" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se alle indlæg"
+          }
+        }
+      }
+    },
+    "Username" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brugernavn"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}
