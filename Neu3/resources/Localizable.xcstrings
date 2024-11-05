@@ -127,6 +127,7 @@
       }
     },
     "Profile" : {
+      "comment" : "Create report label",
       "localizations" : {
         "da" : {
           "stringUnit" : {

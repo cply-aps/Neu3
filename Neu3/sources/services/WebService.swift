@@ -16,7 +16,7 @@ enum NetworkError: Error {
 
 class WebService {
     func loginUser(username: String, password: String, completion: @escaping (Result<LoginResponse, NetworkError>) -> Void) {
-        guard let url = URL(string: "http://localhost:8002/api/User/login?username=\(username)&password=\(password)") else {
+        guard let url = URL(string: "http://localhost:8000/api/User/login?username=\(username)&password=\(password)") else {
             completion(.failure(.badUrl))
             return
         }
