@@ -5,65 +5,6 @@
 //  Created by Casper Lykke Andersen on 24/10/2024.
 //
 
-/**
-import Foundation
-
-enum NetworkError: Error {
-    case badUrl
-    case requestFailed
-    case decodingError
-}
-
-class WebService {
-    func loginUser(username: String, password: String, completion: @escaping (Result<LoginResponse, NetworkError>) -> Void) {
-        // Updated URL to https://localhost:8002/api/user/login
-        guard let url = URL(string: "https://localhost:8002/api/user/login?username=\(username)&password=\(password)") else {
-            completion(.failure(.badUrl))
-            return
-        }
-
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        
-        // Set up a custom URLSession with a delegate to bypass certificate validation
-        let sessionConfig = URLSessionConfiguration.default
-        let session = URLSession(configuration: sessionConfig, delegate: TrustingDelegate(), delegateQueue: nil)
-
-        // Perform the request using the custom session
-        session.dataTask(with: request) { data, response, error in
-            if let _ = error {
-                completion(.failure(.requestFailed))
-                return
-            }
-
-            guard let data = data else {
-                completion(.failure(.requestFailed))
-                return
-            }
-
-            do {
-                let loginResponse = try JSONDecoder().decode(LoginResponse.self, from: data)
-                completion(.success(loginResponse))
-            } catch {
-                completion(.failure(.decodingError))
-            }
-        }.resume()
-    }
-}
-
-// Custom URLSessionDelegate that bypasses certificate validation
-class TrustingDelegate: NSObject, URLSessionDelegate {
-    // Override this method to bypass certificate validation
-    func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-        // Accept any certificate without validation
-        completionHandler(.useCredential, URLCredential(trust: challenge.protectionSpace.serverTrust!))
-    }
-}
-
- */
-
-
-
 
 import Foundation
 
