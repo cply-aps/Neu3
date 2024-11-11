@@ -12,6 +12,16 @@
         }
       }
     },
+    "Change Password" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skift kodeord"
+          }
+        }
+      }
+    },
     "Create Entry" : {
       "comment" : "Create Entry label",
       "localizations" : {
@@ -133,16 +143,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Profil"
-          }
-        }
-      }
-    },
-    "Profile Page" : {
-      "localizations" : {
-        "da" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Profil side"
           }
         }
       }

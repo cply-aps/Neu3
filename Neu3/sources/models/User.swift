@@ -8,8 +8,8 @@
 
 import Foundation
 
-struct User: Codable {
-    let id: String                // Matches "id" in the JSON
+struct User: Identifiable, Codable {
+    var id = UUID().uuidString                // Matches "id" in the JSON
     let userName: String          // Matches "userName" in the JSON
     let normalizedUserName: String
     let email: String
@@ -27,7 +27,7 @@ struct User: Codable {
 }
 
 struct LoginResponse: Decodable {
-    let id: String                // Matches "id" in the JSON
+    var id = UUID().uuidString               // Matches "id" in the JSON
     let userName: String          // Matches "userName" in the JSON
     let normalizedUserName: String
     let email: String
@@ -43,3 +43,4 @@ struct LoginResponse: Decodable {
     let lockoutEnabled: Bool
     let accessFailedCount: Int
 }
+
