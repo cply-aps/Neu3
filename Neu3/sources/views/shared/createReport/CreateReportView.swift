@@ -10,6 +10,9 @@ import SwiftUI
 
 struct CreateReportView: View {
     var body: some View {
+        NavigationStack {
+            
+        }
         Text("Create Report Page")
             .font(.largeTitle)
     }

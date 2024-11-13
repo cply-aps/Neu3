@@ -24,6 +24,8 @@ struct User: Identifiable, Codable {
     let lockoutEnd: String?
     let lockoutEnabled: Bool
     let accessFailedCount: Int
+    
+    static var fileName = "Users.json"
 }
 
 struct LoginResponse: Decodable {

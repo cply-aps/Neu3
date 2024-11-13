@@ -59,7 +59,7 @@ struct StandardUserHomeView: View, Hashable {
 
 
 
-struct HomeView_Previews: PreviewProvider {
+struct StandardUserHomeView_Previews: PreviewProvider {
     static var previews: some View {
         StandardUserHomeView()
     }

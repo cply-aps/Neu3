@@ -25,7 +25,7 @@ struct StandardUserProfileView: View {
                         // Log out by resetting the root view to LoginView
                         if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
                            let window = windowScene.windows.first {
-                            window.rootViewController = UIHostingController(rootView: LoginView())
+                            window.rootViewController = UIHostingController(rootView: ChangePasswordView())
                             window.makeKeyAndVisible()
                         }
                     }) {

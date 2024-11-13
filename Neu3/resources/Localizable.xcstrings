@@ -1,6 +1,27 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Admin" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Admin"
+          }
+        }
+      }
+    },
+    "All" : {
+      "comment" : "All label",
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alle"
+          }
+        }
+      }
+    },
     "An unknown error occurred." : {
       "comment" : "Unknown error label",
       "localizations" : {
@@ -64,12 +85,42 @@
         }
       }
     },
+    "Create user" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opret bruger"
+          }
+        }
+      }
+    },
+    "Create User" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opret bruger"
+          }
+        }
+      }
+    },
     "Forgotten password?" : {
       "localizations" : {
         "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Glemt kodeord?"
+          }
+        }
+      }
+    },
+    "Home" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hjem"
           }
         }
       }
@@ -136,6 +187,17 @@
         }
       }
     },
+    "Patients" : {
+      "comment" : "Patients label",
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Patienter"
+          }
+        }
+      }
+    },
     "Profile" : {
       "comment" : "Create report label",
       "localizations" : {
@@ -143,6 +205,16 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Profil"
+          }
+        }
+      }
+    },
+    "Search user..." : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Søg bruger…"
           }
         }
       }
@@ -175,6 +247,27 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kan ikke oprette forbindelse til server, prøv igen senere."
+          }
+        }
+      }
+    },
+    "Showing: %@" : {
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Viser: %@"
+          }
+        }
+      }
+    },
+    "Therapists" : {
+      "comment" : "Therapists label",
+      "localizations" : {
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terapeuter"
           }
         }
       }

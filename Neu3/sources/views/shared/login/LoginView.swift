@@ -13,7 +13,7 @@ struct LoginView: View {
     @FocusState private var focusedField: Field?
     
     enum Field {
-        case username
+        case userName
         case password
     }
     
@@ -23,23 +23,21 @@ struct LoginView: View {
                     Color.blue.opacity(0.2) // Adjust the color and opacity as needed
                             .edgesIgnoringSafeArea(.all) // Make sure the color fills the entire screen
                     
-                   // ScrollView {
                         VStack(spacing: 20) {
                             Image("CP_Trold_Vaegt")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
                                 .frame(width: 250, height: 250)
-                            // Username TextField
-                            TextField("Username", text: $viewModel.username)
+                            
+                            TextField("Username", text: $viewModel.userName)
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .padding()
-                                .focused($focusedField, equals: .username)
+                                .focused($focusedField, equals: .userName)
                                 .submitLabel(.next)
                                 .onSubmit {
                                     focusedField = .password
                                 }
                             
-                            // Password SecureField
                             SecureField("Password", text: $viewModel.password)
                                 .textFieldStyle(RoundedBorderTextFieldStyle())
                                 .padding()
@@ -49,7 +47,6 @@ struct LoginView: View {
                                     viewModel.login()
                                 }
                             
-                            // Forgotten password button
                             Button("Forgotten password?") {
                                 //TODO: Create "forgottenPassword" POST Method
                             }
@@ -69,13 +66,12 @@ struct LoginView: View {
                             // Dismiss the keyboard when tapping outside the fields
                             focusedField = nil
                         }
-                  //  }
                 .onAppear {
-                    focusedField = .username
+                    focusedField = .userName
                 }
                 // Watch for isLoggedIn to change the root view
                 .fullScreenCover(isPresented: $viewModel.isLoggedIn) {
-                    StandardUserHomeView()
+                    AdminUserHomeView()
                 }
             }
         }
